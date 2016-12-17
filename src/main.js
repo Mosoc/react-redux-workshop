@@ -13,6 +13,7 @@ class Panel extends React.Component{
     return(
         <div>
           <Show num={this.state.number}/>
+          <Btn />
         </div>
     )
   }
@@ -25,6 +26,16 @@ class Show extends React.Component{
 
     return (
       <div>{ num }</div>
+    )
+  }
+}
+
+class Btn extends React.Component {
+  render(){
+    return(
+      <div>
+        <button> + </button>
+      </div>
     )
   }
 }
