@@ -1,4 +1,4 @@
-import { createStore, combineReducer } from 'redux';
+import { createStore, combineReducers } from 'redux';
 
 import counterReducer from '../reducers/counterReducer';
 

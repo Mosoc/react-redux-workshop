@@ -1,7 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import { Provider } from 'react-redux';
+
 // import container
 import Panel from './containers/Panel';
 
-ReactDOM.render(<Panel />, document.getElementById('app'));
+import configureStore from './store/configureStore';
+
+ReactDOM.render(
+  <Provider store={configureStore}>
+      <Panel />
+  </Provider>
+   ,document.getElementById('app'));
