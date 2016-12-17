@@ -12,7 +12,7 @@ class Panel extends React.Component{
   render(){
     return(
         <div>
-          <Show number={1}/>
+          <Show number={this.state.number}/>
         </div>
     )
   }
