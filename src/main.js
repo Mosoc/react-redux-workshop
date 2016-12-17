@@ -1,10 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-class Hello extends React.Component {
+class Panel extends React.Component{
+  constructor(){
+    super();
+    this.state = {
+        number: 0
+    }
+  }
+
   render(){
-    return (<div>Hel123ljoijoijojo</div>);
+    return(
+        <div>
+          Panel
+        </div>
+    )
   }
 }
 
-ReactDOM.render(<Hello />, document.getElementById('app'));
+ReactDOM.render(<Panel />, document.getElementById('app'));
