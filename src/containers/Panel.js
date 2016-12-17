@@ -1,8 +1,12 @@
 import React from 'react';
+import {connect} from 'react-redux';
+import {bindActionCreators} from 'redux';
+
 // import components
 import Show from '../components/Show';
 import Btn from '../components/Btn';
 
+import * as counterAction from '../actions/CounterAction'
 
 class Panel extends React.Component{
   constructor(){
@@ -29,4 +33,18 @@ class Panel extends React.Component{
     )
   }
 }
-export default Panel;
+
+const mapStateToProps = (state) =>{
+  return{
+    counterReducer: state.counterReducer;
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return{
+    counterAction: bindActionCreators(counterAction,dispatch)
+  }
+}
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(Panel);
