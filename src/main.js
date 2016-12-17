@@ -12,8 +12,19 @@ class Panel extends React.Component{
   render(){
     return(
         <div>
-          Panel
+          <Show number={1}/>
         </div>
+    )
+  }
+}
+
+
+class Show extends React.Component{
+  render(){
+    const  number = this.props.number;
+
+    return (
+      <div>{ number }</div>
     )
   }
 }
