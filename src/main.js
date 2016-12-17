@@ -9,11 +9,19 @@ class Panel extends React.Component{
     }
   }
 
+  increment = () => {
+    let newState = {
+      number: this.state.number + 1
+    }
+
+    this.setState(newState);
+  }
+
   render(){
     return(
         <div>
           <Show num={this.state.number}/>
-          <Btn />
+          <Btn increment={this.increment}/>
         </div>
     )
   }
@@ -32,9 +40,11 @@ class Show extends React.Component{
 
 class Btn extends React.Component {
   render(){
+    const { increment} = this.props;
+
     return(
       <div>
-        <button> + </button>
+        <button onClick = {increment}> + </button>
       </div>
     )
   }
