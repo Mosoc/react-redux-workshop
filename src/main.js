@@ -21,10 +21,10 @@ class Panel extends React.Component{
 
 class Show extends React.Component{
   render(){
-    const  number = this.props.number;
+    const  { num }= this.props;
 
     return (
-      <div>{ number }</div>
+      <div>{ num }</div>
     )
   }
 }
