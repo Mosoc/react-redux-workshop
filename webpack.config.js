@@ -5,9 +5,15 @@ module.exports = {
     filename: './dist/bundle.js'
   },
   module: {
-    rules: [{
-      loaders: 'babel-loader'
-    }]
+    rules: [
+        {
+          test: /\.(js|jsx)$/,
+          exclude: /node_modules/,
+          use: {
+            loader: "babel-loader"
+          }
+        }
+      ]
   },
   devtool: 'source-map'
 };
