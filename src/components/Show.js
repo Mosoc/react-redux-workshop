@@ -1,12 +1,10 @@
 import React from 'react';
 
-class Show extends React.Component{
-  render(){
-    const  { num }= this.props;
+class Show extends React.Component {
+  render() {
+    const { num } = this.props;
 
-    return (
-      <div>{ num }</div>
-    )
+    return <div>{num}</div>;
   }
 }
 
