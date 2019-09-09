@@ -7,6 +7,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack-dev-server --hot --inline",
+    "fix:prettier": "prettier \"src/**/*.js\" --write",
     "build": "webpack",
     "start": "npm run dev"
   },
@@ -28,5 +29,8 @@
     "webpack": "^4.39.3",
     "webpack-cli": "^3.3.8",
     "webpack-dev-server": "^3.8.0"
+  },
+  "prettier": {
+    "singleQuote": true
   }
 }
