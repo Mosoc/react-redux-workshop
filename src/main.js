@@ -10,6 +10,7 @@ import configureStore from './store/configureStore';
 
 ReactDOM.render(
   <Provider store={configureStore}>
-      <Panel />
-  </Provider>
-   ,document.getElementById('app'));
+    <Panel />
+  </Provider>,
+  document.getElementById('app')
+);
